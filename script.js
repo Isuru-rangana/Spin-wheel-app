@@ -27,7 +27,7 @@ var pieColors=
 let myChart=new Chart(wheel,{
     //plugin for displaying text on pie chart
 
-    Plugins:[ChartDataLabels],
+    plugins:[ChartDataLabels],
 
     type: "pie",
     data:{
@@ -39,12 +39,28 @@ let myChart=new Chart(wheel,{
         datasets:[{
 
             backgroundColor: pieColors,
-            data:data
+            data:data,
 
     },
 ],
 
     },
 
-    Options:{}
+    options:{
+        responsive: true,
+        animation:{duration:0},
+        plugins:{
+
+            tooltop:false,
+            legend:{
+                display:false,
+            },
+            //display labels inside pie chart
+            datalabels: {
+                color: "#ffffff",
+                formatter: (_, context) => context.chart.data.labels[context.dataIndex],
+                font: { size: 24 },
+              },
+        },
+    },
 });
