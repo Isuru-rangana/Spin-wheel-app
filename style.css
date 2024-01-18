@@ -66,3 +66,19 @@ img{
     top:45%;
     right: -8%;
 }
+#final-value{
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 2em;
+    font-weight: 500;
+
+}
+@media screen and (max-width: 768px){
+    .wrapper{
+        font-size: 12px;
+    }
+    img{
+        right:-5%;
+    }
+    
+}
